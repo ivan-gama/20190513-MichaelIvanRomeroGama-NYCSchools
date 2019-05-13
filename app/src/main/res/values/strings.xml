@@ -1,10 +1,14 @@
 <resources>
     <string name="app_name">NycHighSchoolsMIRG</string>
-    <string name="title_schools">Schools</string>
+    <string name="title_schools">NYC Schools</string>
     <string name="title_school_detail">School Detail</string>
+    <string name="title_sat_scores">SAT Scores</string>
+    <string name="title_overview">Overview</string>
 
     <string name="a11y_star">Star School</string>
     <string name="navigate_up">Navigate Up</string>
+    <string name="loader_message">Loading…</string>
+    <string name="a11y_imageHeader">Header Image</string>
 
 
 </resources>
