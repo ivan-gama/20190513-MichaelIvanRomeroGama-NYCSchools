@@ -1,6 +1,5 @@
 package com.mrgama.nychighschools.adapters;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,7 +23,7 @@ public class SchoolsListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     private List<School> schoolList;
     private SchoolItemListener listener;
 
-    public SchoolsListAdapter(ArrayList<School> schoolArrayList, SchoolItemListener listener) {
+    public SchoolsListAdapter(List<School> schoolArrayList, SchoolItemListener listener) {
         this.schoolList = schoolArrayList;
         this.listener = listener;
     }
