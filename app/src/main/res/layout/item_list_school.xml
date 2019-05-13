@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_itemContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:paddingVertical="@dimen/spacing_normal"
+        android:paddingEnd="@dimen/spacing_normal"
+        tools:targetApi="o">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/keyline"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/margin_small" />
+
+        <TextView
+            android:id="@+id/text_schoolName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/spacing_small"
+            android:textAppearance="@style/TextAppearance.SchoolTitle"
+            app:layout_constraintEnd_toStartOf="@+id/image_starSchool"
+            app:layout_constraintStart_toEndOf="@id/keyline"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Clinton School Writers and Artists, M.S. 260" />
+
+        <com.google.android.material.internal.CheckableImageButton
+            android:id="@+id/image_starSchool"
+            android:layout_width="@dimen/a11y_min_touch_target"
+            android:layout_height="@dimen/a11y_min_touch_target"
+            android:background="?selectableItemBackgroundBorderless"
+            android:checked="false"
+            android:contentDescription="@string/a11y_star"
+            android:src="@drawable/ic_star_border"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/image_bullet"
+            android:layout_width="13dp"
+            android:layout_height="16dp"
+            android:importantForAccessibility="no"
+            android:scaleType="centerCrop"
+            android:tint="@color/colorAccent"
+            app:layout_constraintBottom_toTopOf="@id/barrier_city"
+            app:layout_constraintEnd_toStartOf="@id/text_schoolLocation"
+            app:layout_constraintStart_toEndOf="@id/keyline"
+            app:layout_constraintTop_toBottomOf="@id/text_schoolName"
+
+            app:srcCompat="@drawable/ic_map" />
+
+        <TextView
+            android:id="@+id/text_schoolLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_small"
+            android:textAppearance="@style/TextAppearance.School.ListSecondary"
+            app:layout_constraintBottom_toTopOf="@id/barrier_city"
+            app:layout_constraintEnd_toEndOf="@id/text_schoolName"
+            app:layout_constraintStart_toEndOf="@id/image_bullet"
+            app:layout_constraintTop_toBottomOf="@id/text_schoolName"
+            tools:text="Bronx" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="image_bullet,text_schoolLocation" />
+
+
+        <TextView
+            android:id="@+id/text_academicOp"
+            style="@style/Widget.School.Resume"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:layout_marginEnd="@dimen/spacing_normal"
+            android:drawablePadding="@dimen/spacing_small"
+            android:paddingBottom="@dimen/spacing_normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/keyline"
+            app:layout_constraintTop_toBottomOf="@id/barrier_city"
+            tools:drawableStart="@drawable/ic_bullet"
+            tools:drawableTint="#000"
+            tools:text="Android" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">NycHighSchoolsMIRG</string>
+    <string name="title_schools">Schools</string>
+    <string name="title_school_detail">School Detail</string>
+
+    <string name="a11y_star">Star School</string>
+    <string name="navigate_up">Navigate Up</string>
+
+
+</resources>

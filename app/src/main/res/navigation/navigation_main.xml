@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/fragment_schools_list">
+
+    <fragment
+        android:id="@+id/fragment_schools_list"
+        android:name="com.mrgama.nychighschools.ui.schools.SchoolsListFragment"
+        android:label="@string/title_schools"
+        tools:layout="@layout/fragment_schools_list">
+
+        <action
+            android:id="@+id/openSchoolDetailFragment"
+            app:destination="@id/fragment_school_detail"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_school_detail"
+        android:name="com.mrgama.nychighschools.ui.schools.SchoolDetailFragment"
+        android:label="@string/title_school_detail"
+        tools:layout="@layout/fragment_school_detail">
+
+    </fragment>
+
+</navigation>
